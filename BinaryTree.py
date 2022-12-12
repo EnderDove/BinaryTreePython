@@ -27,14 +27,19 @@ class Tree:
     Values:
         root (Node): The Tree Root Node Object
     
+    Args:
+        *values (Any): Values to be added in the tree
+    
     Methods:
         addValue (value): Adding a new node to the tree
         findValue (value): Search for a Node Object in the Tree by Value query
         findPath (path): Search for a Node Object in the Tree by Path query
         displayTree (): Print Tree graphics
     """
-    def __init__(self):
+    def __init__(self, *values):
         self.root = None
+        for value in values:
+            self.addValue(value)
 
     def addValue(self, value, _node: None | Node = None, _path: list = []) -> None:
         """Adding a new node to the tree
@@ -77,7 +82,8 @@ class Tree:
             value (Any): Requested Value
 
         Returns:
-            Node: Node Object with requested Value
+            Node: Node Object with requested Value 
+                (if there is no node in the tree, then the root of the tree will return)
         """
         if _node is None:
             _node = self.root
