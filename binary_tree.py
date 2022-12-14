@@ -1,7 +1,7 @@
 """Binary Tree Module
 -----
+creator: EnderDove
 """
-
 class Node:
     """Create a Node for Binary Tree
     -----
@@ -85,7 +85,7 @@ class Tree:
             else:
                 self.add_value(value, _node.right, _path)
 
-    def find_value(self, value: any, _node: None | Node = None) -> Node:
+    def find_value(self, value: any, _node: Node = None) -> Node:
         """Search for a Node Object in the Tree by Value query
         -----
         Args:
@@ -136,7 +136,7 @@ class Tree:
                 _node = _node.right
         return _node
 
-    def display_tree(self, _node: None | Node = None) -> None:
+    def display_tree(self, _node: Node = None) -> None:
         """Print Tree graphics
         -----
         Prints:
@@ -191,7 +191,7 @@ class Tree:
                 [a + u * ' ' + b for a, b in zipped_lines]
             return lines, n + m + u, max(p, q) + 2, n + u // 2
 
-    def max_node(self, _node: None | Node = None) -> Node:
+    def max_node(self, _node: Node = None) -> Node:
         """Returns the Node with the maximum Value
         -----
         Returns:
@@ -204,7 +204,7 @@ class Tree:
             return _node
         return self.max_node(_node.right)
 
-    def min_node(self, _node: None | Node = None) -> Node:
+    def min_node(self, _node: Node = None) -> Node:
         """Returns the Node with the minimum Value
         -----
         Returns:

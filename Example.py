@@ -1,4 +1,4 @@
-"""importing BinaryTree module"""
+"""Example of using a Binary Tree Module"""
 import binary_tree as BT
 
 if __name__ == '__main__':
